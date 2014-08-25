@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2606148124">
+    <data-source source="LOCAL" name="Rails khayalamu: development" uuid="717b48c2-8cca-44df-a8ca-312e9c2d587c">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/khayalamu_development</jdbc-url>
+      <user-name>chayon</user-name>
+      <user-password>df9bdf9bdf9bdf98df9bdf99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails khayalamu: test" uuid="9a86d8aa-f1d5-4dd3-9f3a-f5814357c6ae">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/khayalamu_test</jdbc-url>
+      <user-name>chayon</user-name>
+      <user-password>df9bdf9bdf9bdf98df9bdf99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails khayalamu: production" uuid="6cce68ee-9512-429a-af18-587df78eb4b1">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/khayalamu_production</jdbc-url>
+      <user-name>khayalamu</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe1dfe2dfebdff3dfebdfe6dfebdfe7dfffdff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
