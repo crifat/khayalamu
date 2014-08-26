@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<tr>
+  <td><%= link_to "Areas", areas_path %></td>
+  <td><%= link_to "Categories", categories_path %></td>
+  <td><%= link_to "Restauramts", restaurants_path %></td>
+</tr>
 <%= yield %>
 
 </body>

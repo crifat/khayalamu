@@ -5,5 +5,12 @@
   <%= @area.name %>
 </p>
 
+<p>
+  <b>Categories:</b>
+  <% @area.categories.each do |category| %>
+      <br /><%= category.name %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %>

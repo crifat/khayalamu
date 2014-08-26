@@ -10,5 +10,12 @@
   <%= Area.find(@category.area_id).name %>
 </p>
 
+<p>
+  <b>Restaurants:</b>
+  <% @category.restaurants.each do |restaurant| %>
+      <br /><%= restaurant.name %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
