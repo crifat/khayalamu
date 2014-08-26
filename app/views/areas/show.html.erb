@@ -5,6 +5,10 @@
   <%= @area.name %>
 </p>
 
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>
+
+
 <p>
   <b>Categories:</b>
   <% @area.categories.each do |category| %>
@@ -12,5 +16,10 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_area_path(@area) %> |
-<%= link_to 'Back', areas_path %>
+<p><strong>Add a new Category:</strong></p>
+<%= form_for @category do |f| %>
+    <%= f.hidden_field :area_id, :value => @area.id %>
+    <%= f.label :name %>: <%= f.text_field :name %> <br />
+    <%= f.submit 'Add Category' %>
+<% end %>
+

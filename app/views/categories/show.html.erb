@@ -6,9 +6,27 @@
 </p>
 
 <p>
-  <strong>Area</strong>
+  <strong>Area: </strong>
   <%= Area.find(@category.area_id).name %>
 </p>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
+
+
+<p><strong>Add a new restaurant:</strong></p>
+<%= form_for @restaurant do |f| %>
+    <%= f.hidden_field :category_id, :value => @category.id %>
+    <%= f.label :name %>: <%= f.text_field :name %> <br />
+    <%= f.label :address %>: <%= f.text_field :address %> <br />
+    <%= f.label :phone_number %>: <%= f.text_field :phone_number %> <br />
+    <%= f.label :business_hour %>: <%= f.text_field :business_hour %> <br />
+    <%= f.label :delivery %>: <%= f.check_box :delivery %> <br />
+    <%= f.label :image_url %>: <%= f.text_field :image_url %> <br />
+    <%= f.label :longitude %>: <%= f.text_field :longitude %> <br />
+    <%= f.label :latitude %>: <%= f.text_field :latitude %> <br />
+    <%= f.submit 'Add Restaurant' %>
+<% end %>
 
 <p>
   <b>Restaurants:</b>
@@ -17,5 +35,3 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>

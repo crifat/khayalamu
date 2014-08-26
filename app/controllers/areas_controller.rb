@@ -10,6 +10,7 @@ class AreasController < ApplicationController
   # GET /areas/1
   # GET /areas/1.json
   def show
+    @category = Category.new
   end
 
   # GET /areas/new
