@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label "Area Id" %><br>
-    <%= f.number_field :area_id %>
+    <%= f.label "Area" %><br>
+    <%= f.collection_select(:area_id, @areas, :id, :name, :include_blank => "Please select an Area...") %>
   </div>
   <div class="actions">
     <%= f.submit %>

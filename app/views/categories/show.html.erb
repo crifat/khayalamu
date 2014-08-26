@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Area Id:</strong>
-  <%= @category.area_id %>
+  <strong>Area</strong>
+  <%= Area.find(@category.area_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |

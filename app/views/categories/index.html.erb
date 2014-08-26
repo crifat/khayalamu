@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Area Id</th>
+      <th>Area</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,7 +13,8 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= category.area_id %></td>
+        <% @a = Area.find(category.area_id) %>
+        <td><%= @a.name %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
         <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
