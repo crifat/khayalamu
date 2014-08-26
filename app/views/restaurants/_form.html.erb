@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>   <div class="field">
     <%= f.label "Category Id" %><br>
-    <%= f.number_field :category_id %>
+  <%= f.collection_select(:category_id, @categories, :id, :name, :include_blank => "Please select an Category...") %>
    </div>
   <div class="field">
     <%= f.label :address %><br>

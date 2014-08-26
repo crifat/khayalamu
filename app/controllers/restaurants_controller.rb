@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
-
+  before_filter :prepare_categories
   # GET /restaurants
   # GET /restaurants.json
   def index
@@ -70,5 +70,9 @@ class RestaurantsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
       params.require(:restaurant).permit(:name, :address, :phone_number, :business_hour, :delivery, :image_url, :longitude, :latitude, :category_id)
+    end
+
+    def prepare_categories
+      @categories = Category.all
     end
 end
