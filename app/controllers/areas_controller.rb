@@ -5,6 +5,10 @@ class AreasController < ApplicationController
   # GET /areas.json
   def index
     @areas = Area.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @areas }
+    end
   end
 
   # GET /areas/1
