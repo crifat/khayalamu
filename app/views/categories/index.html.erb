@@ -13,7 +13,7 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= Area.find(category.area_id) %></td>
+        <td><%= Area.find(category.area_id).name %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
       </tr>
