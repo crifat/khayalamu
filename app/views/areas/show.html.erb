@@ -7,7 +7,6 @@
 
 <%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %>
-<td><%= link_to 'Destroy', @area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
 
 <p>
@@ -24,3 +23,5 @@
     <%= f.submit 'Add Category' %>
 <% end %>
 
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+<td><%= button_to "Delete", @area, :class => "button", :method => :delete %></td>
