@@ -6,7 +6,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/khayalamu_development</jdbc-url>
       <user-name>chayon</user-name>
-      <user-password>df9bdf9bdf9bdf98df9bdf99</user-password>
+      <user-password>df9bdf98df99df9e</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails khayalamu: test" uuid="9a86d8aa-f1d5-4dd3-9f3a-f5814357c6ae">
@@ -14,7 +14,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/khayalamu_test</jdbc-url>
       <user-name>chayon</user-name>
-      <user-password>df9bdf9bdf9bdf98df9bdf99</user-password>
+      <user-password>df9bdf98df99df9e</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails khayalamu: production" uuid="6cce68ee-9512-429a-af18-587df78eb4b1">

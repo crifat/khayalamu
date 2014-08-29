@@ -1,3 +1,3 @@
 class Area < ActiveRecord::Base
-  has_many :categories
+  has_many :categories, dependent: :destroy
 end
