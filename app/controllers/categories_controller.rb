@@ -15,6 +15,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @restaurant = Restaurant.new
+    @category = Category.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @category }
+    end
   end
 
   # GET /categories/new

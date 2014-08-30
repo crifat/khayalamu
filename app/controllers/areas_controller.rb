@@ -15,6 +15,11 @@ class AreasController < ApplicationController
   # GET /areas/1.json
   def show
     @category = Category.new
+    @area = Area.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @area }
+    end
   end
 
   # GET /areas/new

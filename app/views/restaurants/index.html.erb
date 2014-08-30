@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Food Menu</th>
       <th>Category</th>
       <th>Address</th>
       <th>Phone number</th>
@@ -20,6 +21,7 @@
     <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
+        <td><%= restaurant.food_menu %></td>
         <td><%= Category.find(restaurant.category_id).name %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone_number %></td>

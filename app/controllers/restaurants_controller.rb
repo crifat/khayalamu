@@ -14,7 +14,11 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
-
+    @restaurant = Restaurant.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @restaurant }
+    end
   end
 
   # GET /restaurants/new
@@ -74,7 +78,7 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :phone_number, :business_hour, :delivery, :image_url, :longitude, :latitude, :category_id)
+      params.require(:restaurant).permit(:name, :address, :phone_number, :business_hour, :delivery, :image_url, :longitude, :latitude, :category_id, :food_menu)
     end
 
     def prepare_categories
