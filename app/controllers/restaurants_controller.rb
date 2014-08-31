@@ -7,7 +7,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
     respond_to do |format|
       format.html
-      format.json { render json: @restaurants }
+      format.json { render json: @restaurants, root: false }
     end
   end
 
@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     respond_to do |format|
       format.html
-      format.json { render json: @restaurant }
+      format.json { render json: @restaurant, root: false }
     end
   end
 

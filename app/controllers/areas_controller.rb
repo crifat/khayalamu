@@ -7,7 +7,7 @@ class AreasController < ApplicationController
     @areas = Area.all
     respond_to do |format|
       format.html
-      format.json { render json: @areas }
+      format.json { render json: @areas, root: false }
     end
   end
 
@@ -18,7 +18,7 @@ class AreasController < ApplicationController
     @area = Area.find(params[:id])
     respond_to do |format|
       format.html
-      format.json { render json: @area }
+      format.json { render json: @area, root: false }
     end
   end
 
