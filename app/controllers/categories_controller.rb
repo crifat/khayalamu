@@ -4,7 +4,18 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+
+    if params[:area_id].present?
+      @area = Area.find(params[:area_id])
+      @categories = @area.categories
+    else
+      @categories = Category.all
+    end
+
+
+
+
+
     respond_to do |format|
       format.html
       format.json { render json: @categories, root: false }
@@ -16,6 +27,7 @@ class CategoriesController < ApplicationController
   def show
     @restaurant = Restaurant.new
     @category = Category.find(params[:id])
+
     respond_to do |format|
       format.html
       format.json { render json: @category, root: false }
@@ -73,6 +85,9 @@ class CategoriesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_area
+      @area = Area.find(params[:category_id])
+    end
     def set_category
       @category = Category.find(params[:id])
     end

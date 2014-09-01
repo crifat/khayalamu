@@ -4,7 +4,13 @@ class RestaurantsController < ApplicationController
   # GET /restaurants
   # GET /restaurants.json
   def index
+    if params[:area_id].present?
+      @area = Area.find(params[:area_id])
+      @category = @area.categories.find(params[:category_id])
+      @restaurants = @category.restaurants
+    else
     @restaurants = Restaurant.all
+    end
     respond_to do |format|
       format.html
       format.json { render json: @restaurants, root: false }
